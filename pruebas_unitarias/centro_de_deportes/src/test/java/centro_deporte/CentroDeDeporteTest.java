@@ -38,21 +38,21 @@ class CentroDeDeporteTest {
     }
     @Test
     void crearDeporte() {
-        centroDeporte.crearDeporte("Natación");
-        assertThat(centroDeporte.obtenerDeportes()).contains("Natación");
+        centroDeporte.crearDeporte("Natacion");
+        assertThat(centroDeporte.obtenerDeportes()).contains("Natacion");
     }
     @Test
     void modificarDeporte() {
         centroDeporte.crearDeporte("Boxeo");
         centroDeporte.modificarDeporte(
-                "Boxeo[DEPORTE]",
+                "Boxeo",
                 "BoxeoModificado"
         );
         assertThat(centroDeporte.obtenerDeportes()).contains("BoxeoModificado");
     }
     @Test
     void eliminarDeporte() {
-        centroDeporte.eliminarDeporte("Tenis[DEPORTE]");
-        assertThat(centroDeporte.obtenerDeportes()).doesNotContain("Tenis[DEPORTE]");
+        centroDeporte.eliminarDeporte("TENIS");
+        assertThat(centroDeporte.obtenerDeportes()).doesNotContain("TENIS");
     }
 }

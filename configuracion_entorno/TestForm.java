@@ -49,8 +49,7 @@ public class TestForm {
         //Valores para asserts
         formInputResult = "Readonly input";
         formTitleResult = "Form submitted";
-        formMessageResult = "Received!";
-    }
+     }
 
     @AfterAll
     static void afterAll() {

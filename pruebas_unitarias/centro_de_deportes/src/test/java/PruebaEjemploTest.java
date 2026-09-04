@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PruebaEjemploTest {
     private WebDriver driver;
 
+
     @BeforeEach
     void prepararPruebas() { // preparamos el contexto
         driver = new ChromeDriver();

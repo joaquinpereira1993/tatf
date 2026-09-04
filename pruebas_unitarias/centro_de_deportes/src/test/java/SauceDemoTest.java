@@ -62,17 +62,14 @@ public class SauceDemoTest {
         WebElement botonContinuar = driver.findElement(By.id("continue"));
         botonContinuar.click();
 
-        WebElement botonFinalizar = driver.findElement(By.cssSelector("#finish"));
+        WebElement botonFinalizar = driver.findElement(By.xpath("//button[@id='finish']"));
         botonFinalizar.click();
 
         String mensajeConfirmacion = driver.findElement(By.xpath("//h2[@data-test='complete-header']")).getText();
         Assertions.assertThat(mensajeConfirmacion).as("Thank you for your order!");
-
-
     }
-    @AfterAll
+     @AfterAll
     static void afterAll() {
         driver.quit();
     }
-
 }
